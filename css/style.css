@@ -1,0 +1,250 @@
+/* CSS boiler Plate */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+}
+
+/*************** External Fonts************** */
+
+@font-face {
+  font-family: robin;
+  src: url(../fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayBlack.ttf);
+  src: url(../fonts/neue-haas-grotesk-display-pro-cufonfonts/NeueHaasDisplayMediu.ttf);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --black: #111111;
+  --white: #fff;
+  --mainG: #0da34e;
+}
+
+/* nav part  */
+
+nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 9;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #111111;
+    
+    
+}
+
+
+.nav-menu{
+    display: flex;
+    gap: 2vw;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+
+
+.nav-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.73;
+    font-weight: 600;
+    
+    
+}
+
+
+.nav-menu h5{
+    margin-top: 1vw;
+    line-height: 1vw;
+    display: none;
+    overflow: hidden;
+  
+   
+   
+
+}
+
+.nav-drop h5 span{
+    font-size: 0.68vw;
+    font-weight: 400;
+    display: inline-block;
+    
+    
+}
+
+#nav-bottom{
+    height:0vh;
+    width: 79%;
+    position: absolute;
+    top: 100%;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
+    background-color: #111111;
+
+
+}
+
+.bottom-div{
+    margin-top: 2vw;
+}
+.bottom-div h5{
+    margin-bottom: 0.4vw;
+    overflow: hidden;
+}
+.bottom-div h5 span{
+    font-size: 0.8vw;
+    font-weight: 500;
+    display: inline-block;
+    opacity: 0;
+
+    
+}
+
+
+
+nav button{
+    background-color:var(--mainG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 40px;
+    padding: 12px 12px;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.85vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+nav svg{
+    height: 0.8vw;
+    margin-left: 1vw;
+}
+
+/* page 1 start */
+
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#page1 h1 {
+  font-size: 8.5vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 8.5vw;
+  font-family: robin;
+}
+
+#page1 h1 svg {
+  height: 6vw;
+  width: 6vw;
+  background-color: var(--mainG);
+  border-radius: 50%;
+}
+#page1 p {
+  text-align: center;
+  font-weight: 900;
+  margin-top: 3vh;
+  color: #ffffffad;
+  font-size: 1.2vw;
+  font-family: robin;
+}
+
+#page1-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page1-buttons h4 {
+  font-weight: 400;
+  font-size: 1vw;
+  margin-top: 0.5vw;
+  text-transform: lowercase;
+  padding: 5px 12px;
+  border: 1px solid #666666;
+  border-radius: 50px;
+}
+
+#page1-buttons h4:nth-last-child(2) {
+  border: none;
+}
+
+#page2{
+  height: 100vh;
+  width: 100%;
+  background-color: var(--black);
+  position: relative;
+}
+/*=============== page1 footer swiper================*/
+
+#moving-div{
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 3%;
+    width: 45%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+
+
+}
+#moving-div .move{
+    display: inline-block;
+    animation-name: moving;
+    animation-duration:10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+} 
+
+#blur-left{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:linear-gradient( to right,#111111,transparent);
+    z-index: 2;
+
+}
+#blur-right{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background:linear-gradient( to right,transparent,#111111);
+    z-index: 2;
+
+}
+
+#moving-div .move img{
+    height: 1vw;
+    margin: 0 1.2vw;
+}
